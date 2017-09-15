@@ -1,0 +1,226 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: 'Roboto Condensed', sans-serif; /*aquí se cambia la font*/
+	font-weight:400;
+	background:rgba(255,255,255,1);
+	color:rgba(255,255,255,1);
+}
+
+h1, h2, h3{font-family: 'Oswald', sans-serif;text-align:center; font-weight:700; letter-spacing: 0.1em} /*cambiamos la font de estos 3 titulos*/
+
+h4, h5, h6{font-weight:700;}
+
+h1{letter-spacing:0.1em; color:rgba(255,255,255,0.75);}
+
+h2{letter-spacing:0.02em; color:rgba(255,255,255,0.5); padding:0.2em 0; }
+
+h3{letter-spacing:0.2em; color:rgba(167,206,242,1); padding:2em 0 0.6em 0; }
+
+#contenido{width:98%; margin:1% auto;}
+
+header{
+	width:98%;
+	top:30%;
+	position: absolute;
+	text-align:center;
+	z-index:9;
+	color:white;
+	}
+
+header svg{height: 90px; width:auto;}
+
+@media screen and (max-width: 980px){
+	/*En caso que la pantalla no alcance el ancho de 980px… */
+	header{top:20%;}
+	header svg{height: 75px; width:auto;}
+	/*…solo cambio un par de reglas*/
+}
+
+@media screen and (max-width: 760px){ /*condiciones al tamaño de panralla*/
+	/*En caso que la pantalla no alcance el ancho de 720px… */
+	header{top:10%;}
+	header svg{display:none;}
+	/*…solo cambio un par de reglas*/
+}
+
+video{
+	width:100%;
+	height:auto;
+	}
+
+#somos{
+	width:100%;
+	background:rgb(250,250,250);
+	margin-bottom:2%;
+	}
+
+.dupla{
+	width:46%;
+	padding:2%; /*sagria*/
+	float:left;
+	background-color:white;
+	}
+
+.dupla a{
+	color:rgba(255,255,255,0.75);/*cambiar color*/
+	text-decoration:none;
+	font-weight:700;
+	transition: 0.25s ease all;
+}
+
+.dupla a:hover{
+	color:rgba(167,206,242,1); /*cambiar color*/
+	text-decoration:blink;
+}
+
+.primera{
+	min-height:300px;
+	text-align:left;
+	background-color:rgba(246,180,225,10);
+	background-image:url('media/dupla-02.jpg');
+	background-position:top right;
+	background-repeat:no-repeat;
+	background-size:auto 100%;
+}
+.primera h4{padding: 2% 40% 1% 2%;}
+
+.primera h5{padding: 1% 40% 2% 2%; margin-bottom:5em; letter-spacing:0.1em;}
+
+.primera p{padding: 2% 66% 2% 2%;} /* el 2º numero cmbia hasta donde llega el ancho*/
+
+.primera address{padding: 2% 50% 2% 2%; font-size:0.9em; font-style:normal;}
+
+.segunda{
+	min-height:300px;
+	text-align:right;
+	background-color:rgba(200,175,215,10);
+	background-image:url('media/dupla-01.jpg');
+	background-position:top left;
+	background-repeat:no-repeat;
+	background-size:auto 100%;
+}
+
+.segunda h4{padding: 2% 2% 1% 40%;}
+
+.segunda h5{padding: 1% 2% 2% 40%; margin-bottom:5em; letter-spacing:0.1em;}
+
+.segunda p{padding: 2% 2% 2% 66%;} /* el 4º numero cmbia hasta donde llega el ancho*/
+
+.segunda address{padding: 2% 2% 2% 40%; font-size:0.9em; font-style:normal;}
+
+#somos hr{
+	clear:both;
+	border:none;
+	}
+
+#portafolio{
+	width:100%;
+	background:rgb(250,250,250);
+	padding-bottom:2%;
+	/* 4 veces lo mismo, para que funcione en distintos navegadores */
+	-webkit-animation: fondo 3s infinite linear alternate;
+	-moz-animation: fondo 3s infinite linear alternate;
+	-ms-animation: fondo 3s infinite linear alternate;
+	animation: fondo 3s infinite linear alternate;
+	}
+
+@-webkit-keyframes fondo {
+	from {background-color:rgba(246,206,225,0.5);}
+	to {background-color:rgba(200,175,215,0.5);}
+}
+
+@-moz-keyframes fondo {
+	from {background-color:rgba(246,206,225,0.5);}
+	to {background-color:rgba(200,175,215,0.5);}
+}
+
+@-ms-keyframes fondo {
+	from {background-color:rgba(246,206,225,0.5);}
+	to {background-color:rgba(200,175,215,0.5);}
+}
+
+@keyframes fondo {
+	from {background-color:rgba(246,206,225,0.5);}
+	to {background-color:rgba(200,175,215,0.5);}
+}
+
+.item {
+	width:23%;
+	margin:1%;
+	color:#333;
+	background:white;
+	box-shadow:0 0 5px rgb(240,240,240);
+}
+
+.item figure{overflow:hidden;}
+
+.item figure img{width:100%; height:auto; margin-bottom:-4px;}
+
+.item:hover{cursor:crosshair;}
+
+.item:hover figure img{
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	transform:rotate(180deg);
+	-webkit-transition:-webkit-transform ease-out 0.01;
+	-moz-transition:-moz-transform ease-out 0.01s;
+	-ms-transition:-ms-transform ease-out 0.01s;
+	transition:transform ease-out 0.01s;
+}
+
+.item h4{
+	font-size:1em;
+	letter-spacing:0.025em;
+	margin:5% 5% 3% 5%;
+}
+
+.item p{
+	font-size:0.875em;
+	letter-spacing:0.05em;
+	margin:2% 5% 6% 5%;
+}
+
+footer{
+	color:rgba(167,206,242,0.75);
+	width:100%;
+	padding:3em 0 1em 0;
+	text-align:center;
+}
+
+footer p{
+	color:rgba(167,206,242,0.75);
+	text-transform:uppercase;
+	letter-spacing:0.1em;
+	font-size:0.9em;
+	}
+
+footer hr{
+	color:rgba(167,206,242,0.75);
+	border:2px solid #000;
+	width:10%;
+	margin:2em auto 0 auto;
+	}
+
+@media screen and (orientation: portrait){ /*pantalla más alta que ancga*/
+
+	.dupla{
+		width:96%;
+		padding:2%;
+		float:left;
+	}
+	.item{
+		width:48%;
+		margin:1%;
+		background:black;
+		color:#ddd
+	}
+
+	footer hr{
+	width:20%;
+	}
+}

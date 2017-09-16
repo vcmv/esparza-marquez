@@ -212,11 +212,12 @@ footer hr{
 		width:96%;
 		padding:2%;
 		float:left;
+		color:rgba(0,0,0,0.75);/*corregi esta cosa se lea en portrait*/
 	}
 	.item{
 		width:48%;
 		margin:1%;
-		background:black;
+		background:grey;/*tambien arregle esto*/
 		color:#ddd
 	}
 
